@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+<body>
+    {% csrf_token %}
+<!-- User Introduction -->
+    <div class="basic">
+        Introduction
+        <P>Hello {{request.user.username}} {{request.user.id}}</P>
+        <br><br>
+        <button><a href="{% url 'logout' %}">Logout</a><br></button>
+        <br>
+    </div>
+    <br>
+
+
+
+</body>
+</html>
